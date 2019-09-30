@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.hot {
+				color: red;
+			}
+			.complete {
+				color: green;
+			}
+			.cool {
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<p>Menu</p>
+		<ol id="myMenu">
+			<li id="first" class="hot"><em>Fresh</em> Coffee</li>
+			<li id="second" class="complete">Tea</li>
+			<li class="hot">Hot Chocolate</li>
+			<li class="complete">Mulled Wine</li>
+		</ol>
+		
+		<script>
+			// Checking for an attribute and get its values
+			var item1=document.getElementById("first");
+			if (item1.hasAttribute('class')) { 		// check if attribute exists
+				var attr = item1.getAttribute('class'); // get the attribute
+				document.write('The first item in the list has a class called: ' + attr + '<br>');
+			}
+			
+			item1.className = 'complete'; // change the attribute value
+			if (item1.hasAttribute('class')) { 		// check if attribute exists
+				var attr = item1.getAttribute('class'); // get the attribute
+				document.write('The first item in the list has a class called: ' + attr + '<br>');
+			}
+
+			item1.setAttribute('class', 'cool'); // add an attribute
+			if (item1.hasAttribute('class')) { 		// check if attribute exists
+				var attr = item1.getAttribute('class'); // get the attribute
+				document.write('The first item in the list has a class called: ' + attr + '<br>');
+			}
+			
+			var item2=document.getElementById("second"); 
+			if (item2.hasAttribute('class')) { 		// check if attribute exists
+				var attr = item2.removeAttribute('class'); // remove the attribute
+			}
+
+		</script>
+
+	</body>
+</html>

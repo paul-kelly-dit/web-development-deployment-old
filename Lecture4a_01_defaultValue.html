@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<body>	
+		<form>
+			URL:<br>
+			<input type="text" id="favurl" value="http://www.google.com">
+			<br><br>
+			<input type="button" value="Reset Default" onclick="back_to_default();">
+		</form>
+		
+		<script>
+			function back_to_default() {
+				var url_box = document.getElementById("favurl");
+				url_box.value = url_box.defaultValue;
+			}
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>	
+		<form action="https://site.com/php/form.php">
+			Age(number): <input type='text' id='age'>
+			<input type='button' onclick="isNumeric(document.getElementById('age'))" value='Check Field'>
+		</form>
+		<script>
+			function isNumeric(elem){
+				if (elem.value.match(/^\d+$/)) {
+					return true;
+				} else {
+					alert('Digits only allowed');	
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

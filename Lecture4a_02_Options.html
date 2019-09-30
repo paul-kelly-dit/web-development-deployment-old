@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<body>	
+		<form>
+			Fruits:
+			<select id="optlist">
+				<option selected="selected" value="orange">Orange</option>
+				<option value="apple">Apple</option>
+				<option value="pear">Pear</option>
+			</select>
+		</form>
+		
+		<script>
+			var fbox = document.getElementById("optlist");
+			document.write("The second option is " + fbox.options[1].value);
+		</script>	
+	</body>
+</html>
